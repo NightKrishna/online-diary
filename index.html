@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positivity Pocket</title>
+<link rel="stylesheet" href="custom.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Fraunces:opsz,wght@9..144,500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">✦ Positivity Pocket</div>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <section class="today-card">
+      <div class="date-row">
+        <span id="todayDate"></span>
+        <span id="streak"></span>
+      </div>
+      <h1 id="prompt">What made you smile today?</h1>
+      <div class="textarea-wrap">
+        <textarea id="entryInput" placeholder="One small good thing is enough..." maxlength="280" rows="4"></textarea>
+        <div class="char-count"><span id="charCount">0</span>/280</div>
+      </div>
+      <button id="saveBtn" class="primary-btn">Save today's moment</button>
+      <p id="alreadyLogged" class="muted hidden">You've already logged today. Come back tomorrow — your pocket is full for today. ✨</p>
+    </section>
+
+    <section class="feed">
+      <div class="feed-header">
+        <h2>Your pocket</h2>
+        <button id="clearBtn" class="text-btn">clear all</button>
+      </div>
+      <div id="entriesList" class="entries"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">🌱</div>
+        <p>Nothing here yet.<br>Your first tiny joy will live here.</p>
+      </div>
+    </section>
+  </div>
+  <script src="journal.js"></script>
+</body>
+</html>
